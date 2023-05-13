@@ -34,11 +34,11 @@ pipeline {
     // }
   }
   
-  post {
-    always {
-      junit 'target/debug/deps/*.xml'
-      archiveArtifacts 'target/debug/*.wasm'
-    }
+//   post {
+//     always {
+//       junit 'target/debug/deps/*.xml'
+//       archiveArtifacts 'target/debug/*.wasm'
+//     }
     
     success {
       mail to: 'letorres.dev@gmail.com',
