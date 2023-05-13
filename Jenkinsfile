@@ -18,7 +18,9 @@ pipeline {
       steps {
         sh ''
         sh './build_zip.sh'
+        archiveArtifacts(artifacts: '**/*.zip', followSymlinks: false)
       }
+
     }
     
     // stage('Test') {
