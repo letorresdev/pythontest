@@ -34,11 +34,8 @@ pipeline {
     // }
   }
   
-//   post {
-//     always {
-//       junit 'target/debug/deps/*.xml'
-//       archiveArtifacts 'target/debug/*.wasm'
-//     }
+  post {
+    
     
     success {
       mail to: 'letorres.dev@gmail.com',
