@@ -34,19 +34,5 @@ pipeline {
     // }
   }
   
-  post {
-    
-    
-    success {
-      mail to: 'letorres.dev@gmail.com',
-           subject: 'Build successful',
-           body: 'Good job team!'
-    }
-    
-    failure {
-      mail to: 'letorres.dev@gmail.com',
-           subject: 'Build failed',
-           body: 'Please investigate the issue and fix it ASAP.'
-    }
-  }
+
 }
