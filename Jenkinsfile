@@ -1,11 +1,7 @@
 pipeline {
   agent any
 
-  properties([
-    [$class: 'jenkins.model.BuildDiscarderProperty', strategy: [$class: 'LogRotator', numToKeepStr: '96']],
-    pipelineTriggers([[$class:"SCMTrigger", scmpoll_spec:"M/2 * * * *"]]),
-    ])
-
+  
   environment {
     RUST_VERSION = '1.56.0'
   }
