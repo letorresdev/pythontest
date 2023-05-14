@@ -6,7 +6,7 @@ pipeline {
   }
   
   stages {
-    stage('Install Rust') {
+    stage('Python3') {
       steps {
         sh "python3 --version"
         sh "pip3 list"
@@ -14,6 +14,13 @@ pipeline {
       }
     }
     
+    stage('Test') {
+      steps {
+        sh './test.sh'
+      }
+
+    }
+
     stage('Build') {
       steps {
         sh ''
